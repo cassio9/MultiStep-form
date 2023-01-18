@@ -4,10 +4,8 @@ interface User {
 	name: string;
 	email: string;
 	phone: string;
-	arcade: boolean;
-	advanced: boolean;
-	pro: boolean;
-	billing: string;
+	plan: string;
+	billing: boolean;
 	onlineService: boolean;
 	largerStorage: boolean;
 	customizableProfile: boolean;
@@ -20,10 +18,8 @@ const useUserStore = create<User>((set) => ({
 	name: "",
 	email: "",
 	phone: "",
-	arcade: false,
-	advanced: false,
-	pro: false,
-	billing: "",
+	plan: "",
+	billing: false,
 	onlineService: false,
 	largerStorage: false,
 	customizableProfile: false,
