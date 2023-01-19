@@ -20,12 +20,12 @@ const FormPage2: React.FC<Props> = ({ setPage }) => {
 	};
 
 	return (
-		<div className="-translate-y-[2.3rem]  max-w-sm">
+		<div className="-translate-y-[2.3rem] md:-translate-x-10 max-w-sm md:max-w-md">
 			<div className="bg-white rounded-xl p-4 pb-8 mx-4 z-20">
 				<h1 className="text-MarineBlue text-2xl font-bold">Select your plan</h1>
 				<p className="text-CoolGray py-4 pr-6">You have the option of monthly or yearly billing</p>
 				<form id="page2" onSubmit={(e) => submitForm(e)}>
-					<ul className="flex flex-col gap-3">
+					<ul className="flex flex-col gap-3 md:flex-row">
 						<li className="">
 							<input
 								type="radio"
@@ -39,10 +39,10 @@ const FormPage2: React.FC<Props> = ({ setPage }) => {
 							/>
 							<label
 								htmlFor="arcade"
-								className="py-2 px-4  text-gray-500 bg-white border border-gray-200 
-					rounded-lg cursor-pointer dark:hover:text-gray-300 flex
+								className=" py-2 px-4  text-gray-500 bg-white border border-gray-200 
+					rounded-lg cursor-pointer dark:hover:text-gray-300 flex 
 					  peer-checked:border-MarineBlue peer-checked:bg-Magnolia peer-checked:text-blue-600 hover:text-gray-600 hover:bg-gray-100 ">
-								<div className="flex gap-4 items-start">
+								<div className="flex md:flex-col md:w-[85px] md:pt-2   gap-4 items-start">
 									<img src={ArcadeIcon} alt="" />
 									<div className="">
 										<p className="w-full text-md font-semibold text-MarineBlue">Arcade</p>
@@ -68,7 +68,7 @@ const FormPage2: React.FC<Props> = ({ setPage }) => {
 								className="py-2 px-4 text-gray-500 bg-white border border-gray-200 
 					rounded-lg cursor-pointer dark:hover:text-gray-300 flex
 					peer-checked:border-MarineBlue peer-checked:bg-Magnolia peer-checked:text-blue-600 hover:text-gray-600 hover:bg-gray-100">
-								<div className="flex gap-4 items-start">
+								<div className="flex md:flex-col md:w-[85px] md:pt-2  gap-4 items-start">
 									<img src={AdvancedIcon} alt="" />
 									<div className="">
 										<p className="w-full text-md font-semibold text-MarineBlue">Advanced</p>
@@ -96,7 +96,7 @@ const FormPage2: React.FC<Props> = ({ setPage }) => {
 								className="py-2 px-4 text-gray-500 bg-white border border-gray-200 
 					rounded-lg cursor-pointer dark:hover:text-gray-300 flex
 					  peer-checked:border-MarineBlue peer-checked:bg-Magnolia peer-checked:text-red-600 hover:text-gray-600 hover:bg-gray-100 ">
-								<div className="flex gap-4 items-start">
+								<div className="flex md:flex-col md:w-[85px] md:pt-2  gap-4 items-start">
 									<img src={ProIcon} alt="" />
 									<div className="">
 										<p className="w-full text-md font-semibold text-MarineBlue">Pro</p>
@@ -110,7 +110,7 @@ const FormPage2: React.FC<Props> = ({ setPage }) => {
 						</li>
 					</ul>
 				</form>
-				<div className="flex justify-center bg-Magnolia mt-4 p-3 rounded-xl">
+				<div className="flex justify-center bg-Magnolia mt-8  p-3 rounded-xl">
 					<label className="relative inline-flex items-center cursor-pointer">
 						<span
 							className={`mr-4 text-md ${

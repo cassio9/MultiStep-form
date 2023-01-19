@@ -1,4 +1,5 @@
 import HeroPattern from "../assets/images/bg-sidebar-mobile.svg";
+import HeroPattern1 from "../assets/images/bg-sidebar-desktop.svg";
 
 interface Props {
 	pageNumber: number;
@@ -6,32 +7,60 @@ interface Props {
 
 const Header: React.FC<Props> = ({ pageNumber }) => {
 	return (
-		<div className=" h-[8.5rem] flex items-start justify-center ">
-			<img
-				src={HeroPattern}
-				className="absolute w-full z-0 max-h-[30%] object-cover object-top"
-				alt="Pattern"
-			/>
-			<div className="flex gap-3 translate-y-3  z-10">
-				<div
-					className={`py-1.5 text-lg px-4 border-2 border-PastelBlue font-bold rounded-full  text-white 
+		<div className=" h-[8.5rem] md:h-full md:p-6 md:block w-full">
+			<picture className="">
+				<source media="(min-width: 768px)" srcSet={HeroPattern1} />
+				<img
+					src={HeroPattern}
+					className="absolute inset-0  md:max-h-full w-full z-100 max-h-[30%] object-cover object-top
+					md:p-4  md:w-1/3 md:rounded-3xl md:h-full"
+					alt="Pattern"
+				/>
+			</picture>
+			<div className="flex gap-3 md:gap-4 md:p-4 translate-y-3 justify-center mx-auto md:flex-col md:items-start">
+				<div className="flex flex-row-reverse items-start gap-4">
+					<div className="hidden md:block">
+						<p className="text-CoolGray text-sm">STEP 1</p>
+						<p className="text-white w-[100px] text-sm">YOUR INFO</p>
+					</div>
+					<div
+						className={`py-1.5 text-lg px-4 border-2 border-PastelBlue font-bold rounded-full  text-white 
                     ${pageNumber === 1 && "bg-PastelBlue text-MarineBlue"}`}>
-					1
+						1
+					</div>
 				</div>
-				<div
-					className={`py-1.5 text-lg px-4 border-2 border-PastelBlue font-bold rounded-full  text-white 
+				<div className="flex flex-row-reverse items-start gap-4">
+					<div className="hidden md:block">
+						<p className="text-CoolGray text-sm">STEP 2</p>
+						<p className="text-white w-[100px] text-sm">SELECT PLAN</p>
+					</div>
+					<div
+						className={`py-1.5 text-lg px-4 border-2 border-PastelBlue font-bold rounded-full  text-white 
                     ${pageNumber === 2 && "bg-PastelBlue text-MarineBlue"}`}>
-					2
+						2
+					</div>
 				</div>
-				<div
-					className={`py-1.5 text-lg px-4 border-2 border-PastelBlue font-bold rounded-full  text-white 
+				<div className="flex flex-row-reverse items-start gap-4">
+					<div className="hidden md:block">
+						<p className="text-CoolGray text-sm">STEP 3</p>
+						<p className="text-white w-[100px] text-sm">ADD-ONS</p>
+					</div>
+					<div
+						className={`py-1.5 text-lg px-4 border-2 border-PastelBlue font-bold rounded-full  text-white 
                     ${pageNumber === 3 && "bg-PastelBlue text-MarineBlue"}`}>
-					3
+						3
+					</div>
 				</div>
-				<div
-					className={`py-1.5 text-lg px-4 border-2 border-PastelBlue font-bold rounded-full  text-white 
+				<div className="flex flex-row-reverse items-start gap-4">
+					<div className="hidden md:block">
+						<p className="text-CoolGray text-sm">STEP 4</p>
+						<p className="text-white w-[100px] text-sm">SUMMARY</p>
+					</div>
+					<div
+						className={`py-1.5 text-lg px-4 border-2 border-PastelBlue font-bold rounded-full  text-white 
                     ${pageNumber === 4 && "bg-PastelBlue text-MarineBlue"}`}>
-					4
+						4
+					</div>
 				</div>
 			</div>
 		</div>

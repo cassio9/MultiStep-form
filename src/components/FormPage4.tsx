@@ -38,7 +38,7 @@ const FormPage4: React.FC<Props> = ({ setPage }) => {
 	};
 
 	return (
-		<div className="-translate-y-[2.3rem]  max-w-sm">
+		<div className="-translate-y-[2.3rem] md:-translate-x-10  max-w-sm md:max-w-md">
 			<div className="bg-white rounded-xl p-4 pb-8 mx-4 z-20">
 				<h1 className="text-MarineBlue text-2xl font-bold">Finishing up</h1>
 				<p className="text-CoolGray py-4 pr-6">

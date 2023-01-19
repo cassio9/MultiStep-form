@@ -21,10 +21,10 @@ const FormPage3: React.FC<Props> = ({ setPage }) => {
 	};
 
 	return (
-		<div className="-translate-y-[2.3rem]  max-w-sm">
-			<div className="bg-white rounded-xl p-4 pb-8 mx-4 z-20">
+		<div className="-translate-y-[2.3rem] md:-translate-x-10 max-w-sm md:max-w-md">
+			<div className="bg-white rounded-xl p-4  pb-8 mx-4 z-20">
 				<h1 className="text-MarineBlue text-2xl font-bold">Select your plan</h1>
-				<p className="text-CoolGray py-4 pr-6">You have the option of monthly or yearly billing</p>
+				<p className="text-CoolGray py-4 pr-6">Add-ons help enhance your gaming experience</p>
 				<form id="page3" onSubmit={(e) => submitForm(e)}>
 					<ul className={`flex flex-col items-center w-full gap-4 bg-white`}>
 						<li

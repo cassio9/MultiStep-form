@@ -13,7 +13,7 @@ const FormPage1: React.FC<Props> = ({ setPage }) => {
 	};
 
 	return (
-		<div className="-translate-y-[2.3rem]  max-w-sm h-full">
+		<div className="-translate-y-[2.3rem] md:-translate-x-10  max-w-sm md:max-w-md h-full">
 			<div className="bg-white rounded-xl p-4 pb-8 mx-4 z-20 ">
 				<h1 className="text-MarineBlue text-2xl font-bold">Personal info</h1>
 				<p className="text-CoolGray py-4 pr-6">
@@ -24,7 +24,7 @@ const FormPage1: React.FC<Props> = ({ setPage }) => {
 						Name
 					</label>
 					<input
-						className="p-2 text-MarineBlue font-bold placeholder:font-normal focus:outline-MarineBlue  w-full border-CoolGray border-[1px]"
+						className="p-2 rounded-md text-MarineBlue font-bold placeholder:font-normal focus:outline-MarineBlue  w-full border-CoolGray border-[1px]"
 						type="text"
 						id="name"
 						value={name}
@@ -36,7 +36,7 @@ const FormPage1: React.FC<Props> = ({ setPage }) => {
 						Email Address
 					</label>
 					<input
-						className="p-2 text-MarineBlue font-bold placeholder:font-normal focus:outline-MarineBlue  w-full border-CoolGray border-[1px]"
+						className="p-2 rounded-md text-MarineBlue font-bold placeholder:font-normal focus:outline-MarineBlue  w-full border-CoolGray border-[1px]"
 						type="email"
 						id="email"
 						value={email}
@@ -48,13 +48,14 @@ const FormPage1: React.FC<Props> = ({ setPage }) => {
 						Phone Number
 					</label>
 					<input
-						className="p-2 text-MarineBlue font-bold placeholder:font-normal focus:outline-MarineBlue  w-full border-CoolGray border-[1px]"
+						className="p-2 rounded-md text-MarineBlue font-bold placeholder:font-normal focus:outline-MarineBlue  w-full border-CoolGray border-[1px]"
 						type="tel"
 						id="tel"
 						value={phone}
 						required
+						pattern="^(1\s?)?((\([0-9]{3}\))|[0-9]{3})[\s\-]?[\0-9]{3}[\s\-]?[0-9]{4}$"
 						onChange={(e) => setPhone(e.target.value)}
-						placeholder="e.g. +1 234 567 890"
+						placeholder="333-333-4444"
 					/>
 				</form>
 			</div>
