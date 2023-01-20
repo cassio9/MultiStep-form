@@ -21,7 +21,10 @@ function App() {
 
 	return (
 		<div className="relative bg-Magnolia min-h-screen  font-Ubuntu flex flex-col justify-start md:justify-center items-center md:p-4">
-			<div className="md:relative md:grid md:grid-cols-[.7fr,1fr]   md:grid-rows-[33rem]  md:bg-white  md:rounded-xl ">
+			<div
+				className={`md:relative md:grid md:grid-cols-[.7fr,1fr]   md:grid-rows-[32rem]  md:bg-white  md:rounded-xl ${
+					pageNumber === 4 && confirmContract && "md:-translate-y-6"
+				}`}>
 				<Header pageNumber={pageNumber} />
 				<div className="md:translate-y-[4rem] mb-16">
 					{pageNumber === 1 && <FormPage1 setPage={setPageNumber} />}

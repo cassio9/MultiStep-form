@@ -13,10 +13,10 @@ const FormPage1: React.FC<Props> = ({ setPage }) => {
 	};
 
 	return (
-		<div className="-translate-y-[2.3rem] md:-translate-x-10  max-w-sm md:max-w-md h-full">
-			<div className="bg-white rounded-xl p-4 pb-8 mx-4 z-20 ">
+		<div className="-translate-y-[2.3rem] md:-translate-y-[1.3rem] md:-translate-x-14  max-w-sm md:max-w-lg  h-full">
+			<div className="bg-white rounded-xl p-4 md:p-1 pb-8 mx-4 z-20 ">
 				<h1 className="text-MarineBlue text-2xl font-bold">Personal info</h1>
-				<p className="text-CoolGray py-4 pr-6">
+				<p className="text-CoolGray py-4 pr-6 md:text-sm">
 					Please provide your name, email address and phone number.
 				</p>
 				<form id="page1" onSubmit={(e) => submitForm(e)} className="">
@@ -53,9 +53,9 @@ const FormPage1: React.FC<Props> = ({ setPage }) => {
 						id="tel"
 						value={phone}
 						required
-						pattern="^(1\s?)?((\([0-9]{3}\))|[0-9]{3})[\s\-]?[\0-9]{3}[\s\-]?[0-9]{4}$"
+						pattern="^\D{0,2}[0]{0,3}[1]{0,1}\D{0,2}([2-9])(\d{2})\D{0,2}(\d{3})\D{0,2}(\d{3})\D{0,2}$"
 						onChange={(e) => setPhone(e.target.value)}
-						placeholder="333-333-4444"
+						placeholder="e.g. +1 234 567 890"
 					/>
 				</form>
 			</div>

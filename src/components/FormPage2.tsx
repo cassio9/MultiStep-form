@@ -20,8 +20,8 @@ const FormPage2: React.FC<Props> = ({ setPage }) => {
 	};
 
 	return (
-		<div className="-translate-y-[2.3rem] md:-translate-x-10 max-w-sm md:max-w-md">
-			<div className="bg-white rounded-xl p-4 pb-8 mx-4 z-20">
+		<div className="-translate-y-[2.3rem] md:translate-x-10  [@media(min-width:789px)]:translate-x-12   max-w-sm md:max-w-lg  h-full">
+			<div className="bg-white rounded-xl p-4 pb-8 mx-[17px] z-20">
 				<h1 className="text-MarineBlue text-2xl font-bold">Select your plan</h1>
 				<p className="text-CoolGray py-4 pr-6">You have the option of monthly or yearly billing</p>
 				<form id="page2" onSubmit={(e) => submitForm(e)}>
@@ -47,7 +47,9 @@ const FormPage2: React.FC<Props> = ({ setPage }) => {
 									<div className="">
 										<p className="w-full text-md font-semibold text-MarineBlue">Arcade</p>
 										<p className="w-full text-CoolGray text-sm">{isYearly ? "$90/yr" : "$9/mo"}</p>
-										{isYearly && <p className="text-PurplishBlue text-sm mt-1">2 months free</p>}
+										{isYearly && (
+											<p className="text-PurplishBlue text-[12px] mt-1">2 months free</p>
+										)}
 									</div>
 								</div>
 							</label>
@@ -75,7 +77,9 @@ const FormPage2: React.FC<Props> = ({ setPage }) => {
 										<p className="w-full text-CoolGray text-sm">
 											{isYearly ? "$120/yr" : "$12/mo"}
 										</p>
-										{isYearly && <p className="text-PurplishBlue text-sm mt-1">2 months free</p>}
+										{isYearly && (
+											<p className="text-PurplishBlue text-[12px] mt-1">2 months free</p>
+										)}
 									</div>
 								</div>
 							</label>
@@ -103,14 +107,16 @@ const FormPage2: React.FC<Props> = ({ setPage }) => {
 										<p className="w-full text-CoolGray text-sm">
 											{isYearly ? "$150/yr" : "$15/mo"}
 										</p>
-										{isYearly && <p className="text-PurplishBlue text-sm mt-1">2 months free</p>}
+										{isYearly && (
+											<p className="text-PurplishBlue text-[12px] mt-1">2 months free</p>
+										)}
 									</div>
 								</div>
 							</label>
 						</li>
 					</ul>
 				</form>
-				<div className="flex justify-center bg-Magnolia mt-8  p-3 rounded-xl">
+				<div className="flex justify-center bg-Magnolia mt-8  p-3 w-full   rounded-xl">
 					<label className="relative inline-flex items-center cursor-pointer">
 						<span
 							className={`mr-4 text-md ${

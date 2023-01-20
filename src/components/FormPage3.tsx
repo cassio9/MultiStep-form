@@ -21,12 +21,14 @@ const FormPage3: React.FC<Props> = ({ setPage }) => {
 	};
 
 	return (
-		<div className="-translate-y-[2.3rem] md:-translate-x-10 max-w-sm md:max-w-md">
-			<div className="bg-white rounded-xl p-4  pb-8 mx-4 z-20">
-				<h1 className="text-MarineBlue text-2xl font-bold">Select your plan</h1>
-				<p className="text-CoolGray py-4 pr-6">Add-ons help enhance your gaming experience</p>
+		<div className="-translate-y-[2.3rem] md:pr-10 md:pl-12 md:-translate-x-16 max-w-sm md:max-w-md ">
+			<div className="bg-white rounded-xl p-4 md:px-0 md:mx-0 pb-8 mx-4 z-20">
+				<h1 className="text-MarineBlue text-2xl font-bold">Pick add-ons</h1>
+				<p className="text-CoolGray py-4 pr-6 md:text-sm md:pr-16">
+					Add-ons help enhance your gaming experience
+				</p>
 				<form id="page3" onSubmit={(e) => submitForm(e)}>
-					<ul className={`flex flex-col items-center w-full gap-4 bg-white`}>
+					<ul className={`flex flex-col items-center w-full md:w-[106%] gap-4 bg-white`}>
 						<li
 							className={`w-full border rounded-lg  text-sm border-LightGray ${
 								hasOnlineService ? "border-PurplishBlue bg-Magnolia" : ""

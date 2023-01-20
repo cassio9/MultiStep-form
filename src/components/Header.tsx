@@ -7,13 +7,13 @@ interface Props {
 
 const Header: React.FC<Props> = ({ pageNumber }) => {
 	return (
-		<div className=" h-[8.5rem] md:h-full md:p-6 md:block w-full">
+		<div className=" h-[8.5rem] md:h-full md:p-3 md:block w-full">
 			<picture className="">
 				<source media="(min-width: 768px)" srcSet={HeroPattern1} />
 				<img
 					src={HeroPattern}
 					className="absolute inset-0  md:max-h-full w-full z-100 max-h-[30%] object-cover object-top
-					md:p-4  md:w-1/3 md:rounded-3xl md:h-full"
+					md:p-2 md:translate-y-1 md:h-[98%] md:w-1/3 md:rounded-3xl "
 					alt="Pattern"
 				/>
 			</picture>
